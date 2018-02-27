@@ -39,11 +39,11 @@ ul.art-hmenu, ul.art-hmenu ul {
 }
 
 ul.art-hmenu>li:first-child {
-   padding-right:0;
+   padding-right:2px;
 }
 
 ul.art-hmenu ul{
-   background-color: #757575 !important;
+   background-color: #EEAF04 !important;
 }
 
 .art-content-layout, .art-content-layout-row, .art-layout-cell 
@@ -96,9 +96,6 @@ form.art-search
    height: 1%;
 }
 
-.art-postfootericons span{
-   zoom: 1;
-}
 .close-alt, .arrow-right-alt, .arrow-left-alt {
    display: block !important;
 }
