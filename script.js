@@ -1176,23 +1176,23 @@ resizeData['headline'] = {
        x: 0,
        y: 0
    },
-   width: 343,
+   width: 297,
    height: 47,
    autoWidth: true};
 
 resizeData['slogan'] = {
    responsive: [
-                  { left: 0.06, top: 0.52, visible: true }, 
-                  { left: 0.06, top: 0.52, visible: true }, 
-                  { left: 0.06, top: 0.52, visible: true }, 
-                  { left: 0.06, top: 0.52, visible: true }, 
-                  { left: 0.06, top: 0.52, visible: true }, 
+                  { left: 0.08, top: 0.52, visible: true }, 
+                  { left: 0.08, top: 0.52, visible: true }, 
+                  { left: 0.08, top: 0.52, visible: true }, 
+                  { left: 0.08, top: 0.52, visible: true }, 
+                  { left: 0.08, top: 0.52, visible: true }, 
                ],
    area: {
        x: 0,
        y: 0
    },
-   width: 279,
+   width: 231,
    height: 16,
    autoWidth: true};
 

@@ -444,7 +444,7 @@ li p, .art-postcontent li p, .art-blockcontent li p
   min-width: 50px;
   top: 45px;
   left: 7.03%;
-  margin-left: -24px !important;
+  margin-left: -20px !important;
   line-height: 100%;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -478,9 +478,9 @@ text-shadow: 1.4px 1.4px 1px rgba(255, 255, 255, 0.8), 2.1px 2.1px 1px rgba(23, 
   position: absolute;
   min-width: 50px;
   top: 95px;
-  left: 6.17%;
+  left: 8.13%;
   line-height: 100%;
-  margin-left: -17px !important;
+  margin-left: -18px !important;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
