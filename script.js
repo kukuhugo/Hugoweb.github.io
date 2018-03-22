@@ -1182,20 +1182,72 @@ resizeData['headline'] = {
 
 resizeData['slogan'] = {
    responsive: [
-                  { left: 0.08, top: 0.52, visible: true }, 
-                  { left: 0.08, top: 0.52, visible: true }, 
-                  { left: 0.08, top: 0.52, visible: true }, 
-                  { left: 0.08, top: 0.52, visible: true }, 
-                  { left: 0.08, top: 0.52, visible: true }, 
+                  { left: 0.08, top: 0.51, visible: true }, 
+                  { left: 0.08, top: 0.51, visible: true }, 
+                  { left: 0.08, top: 0.51, visible: true }, 
+                  { left: 0.08, top: 0.51, visible: true }, 
+                  { left: 0.08, top: 0.51, visible: true }, 
                ],
    area: {
        x: 0,
        y: 0
    },
-   width: 231,
+   width: 237,
    height: 16,
    autoWidth: true};
 
+jQuery(function ($) {
+    'use strict';
+    if ($.fn.themeSlider) {
+        $(".art-slidecontainerheader").each(function () {
+            var slideContainer = $(this), tmp;
+            var inner = $(".art-slider-inner", slideContainer);
+            inner.children().filter("script").remove();
+            var helper = null;
+            
+            if ($.support.themeTransition) {
+                helper = new BackgroundHelper();
+                helper.init("fade", "next", $(".art-slide-item", inner).first().css($.support.themeTransition.prefix + "transition-duration"));
+                inner.children().each(function () {
+                    helper.processSlide($(this));
+                });
+
+                
+            } else if (browser.ie && browser.version <= 8) {
+                var slidesInfo = {
+".art-slideheader0": {
+    "bgimage" : "url('images/slideheader0.png')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slideheader1": {
+    "bgimage" : "url('images/slideheader1.png')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+}
+                };
+                $.each(slidesInfo, function(selector, info) {
+                    processElementMultiplyBg(slideContainer.find(selector), info);
+                });
+            }
+
+            inner.children().eq(0).addClass("active");
+            slideContainer.themeSlider({
+                pause: 2600,
+                speed: 600,
+                repeat: true,
+                animation: "fade",
+                direction: "next",
+                navigator: slideContainer.siblings(".art-slidenavigatorheader"),
+                helper: helper
+            });
+            
+                        
+        });
+    }
+});
 // used to apply compicated values in style like '!important!
 function applyCss(object, param, value) {
     var rg = new RegExp(param + '\s*:\s*[^;]+;', "i");
@@ -1441,7 +1493,7 @@ jQuery(function ($) {
     if (!browser.ie || browser.version > 8)
         return;
     processElementMultiplyBg(".art-header", {
-        "bgimage": "url('images/header.png')",
+        "bgimage": "none",
         "bgposition": "0 0",
         "images": "",
         "positions": ""
